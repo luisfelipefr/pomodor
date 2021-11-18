@@ -22,7 +22,7 @@ const App = () => {
   return (
     <div className="container">
       <h1>Pomodoro</h1>
-      <small>Be productive the right way.</small>
+      <small>Seja produtivo da maneira certa.</small>
       {pomodoro !== 0 ?
       <>
         <ul className="labels">
