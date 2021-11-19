@@ -16,12 +16,12 @@ const SetPomodoro = () => {
   const handleChange = (input) => {
     const { name, value } = input.target;
     
-    
     if (value === '' || !numberRegexTest.test(value)) {
-      input.target.value = "0";
+      input.target.value = "";
       console.log(value);
       return;
     }
+    
     console.log(value);
     if(value.length > 3) return;
     switch (name) {
@@ -44,6 +44,7 @@ const SetPomodoro = () => {
         });
         break;
     }
+    
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -56,8 +57,7 @@ const SetPomodoro = () => {
         <div className="input-wrapper">
           <input
             className="input"
-            type="text"
-            
+            type=""
             name="work"
             onChange={handleChange}
             value={newTimer.work}
@@ -77,10 +77,11 @@ const SetPomodoro = () => {
             value={newTimer.long}
           />
         </div>
-        <button type="submit">Set Timer</button>
+        <button type="submit">Definir temporizador</button>
       </form>
     </div>
   );
+  
   
 };
 
